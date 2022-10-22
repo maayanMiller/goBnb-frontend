@@ -1,0 +1,542 @@
+.trip-card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.trip-details-holder {
+    margin-top: 40px;
+    width: 372px;
+    height: 461px;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(221, 221, 221);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(221, 221, 221);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(221, 221, 221);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 20px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 90px;
+}
+
+.price-tag {
+    -moz-box-align: baseline !important;
+    -moz-box-pack: justify !important;
+    -moz-box-direction: normal !important;
+    -moz-box-orient: horizontal !important;
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    margin-bottom: 24px !important;
+    white-space: nowrap !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    color: rgb(34, 34, 34) !important;
+}
+
+.price-for-night {
+    font-weight: 550 !important;
+    font-size: 26px !important;
+    line-height: 26px !important;
+}
+
+.trip-details {
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.price-line {
+    color: rgb(34, 34, 34) !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-break: strict !important;
+    line-height: 20px !important;
+    text-align: left !important;
+    text-decoration: underline;
+}
+
+.price-total {
+    color: rgb(34, 34, 34);
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 20px;
+    order: 2;
+    white-space: nowrap
+}
+
+.check {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    width: fit-content;
+}
+
+.trip-order-container {
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 20px;
+    margin-bottom: 16px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.date-details {
+    min-height: 56px;
+    outline: currentcolor none medium;
+    margin: 0px;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    line-height: 18px;
+    appearance: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+}
+
+.icon-arrow {
+    width: 19px;
+    height: 19px;
+    padding-top: 5px;
+}
+
+.date-details :first-child {
+    border-top-left-radius: 8px;
+}
+
+.date-details :last-child {
+    border-top-right-radius: 8px;
+}
+
+.date-details-cell {
+    min-height: 56px;
+    display: flex;
+    padding: 12.5px 0px 0px 12px !important;
+    flex-direction: column;
+    font-family: inherit;
+    cursor: pointer;
+    flex-grow: 1;
+    border: 1px solid #cecece;
+    border-bottom: none
+}
+
+.gusts-details-container {
+    border-left: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+    border-right: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    display: flex;
+    flex-direction: row;
+    color: rgb(34, 34, 34) !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    border-radius: 0px 0px 8px 8px;
+    inset: 0px 0px -1px;
+    justify-content: space-between;
+    height: 56px;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 20px;
+}
+
+.gusts-details {
+    flex-direction: column;
+    width: fit-content;
+    padding: 12.5px 0px 12.5px 12px !important;
+    display: flex !important;
+}
+
+.drop-menu-details {
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% !important;
+    border-radius: 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px !important;
+    min-width: 280px !important;
+    padding: 16px !important;
+    position: absolute !important;
+    text-align: left !important;
+    z-index: 999 !important;
+    width: fit-content;
+}
+
+.trip-message {
+    height: 26px;
+    text-align: center;
+    color: rgb(34, 34, 34) !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    list-style-type: none !important;
+    letter-spacing: 0.5px;
+    padding-top: 1em;
+}
+
+.btn-hover {
+    justify-self: flex-start;
+    width: 100% !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    height: 55px !important;
+    text-align: center !important;
+    border: none !important;
+    background-size: 300% 100% !important;
+    -moz-transition: all .4s ease-in-out !important;
+    -o-transition: all .4s ease-in-out !important;
+    -webkit-transition: all .4s ease-in-out !important;
+    transition: all .4s ease-in-out !important;
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f) !important;
+    box-shadow: 0 5px 15px rgb(242 97 103 / 40%) !important;
+}
+
+.action-reserve {
+    color: $clr3;
+    border-radius: 0.5em;
+    height: 48px;
+    text-align: center;
+    padding: 0.9em;
+}
+
+.trip-total-price {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.trip-fee {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.total {
+    border-top: $clr9 solid 1px;
+    margin-top: 17px;
+    padding-top: 25px;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    color: rgb(34, 34, 34) !important;
+    font-family: 'Airbnb-bold';
+}
+
+.trip-footer {
+    justify-content: center;
+    height: 125px;
+    margin-top: 24px !important;
+}
+
+.btn-arrow-details {
+    width: fit-content;
+    -moz-box-pack: center !important;
+    -moz-box-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-width: 36px !important;
+    padding-right: 12px !important;
+    color: rgb(34, 34, 34) !important;
+    cursor: pointer;
+    align-self: center;
+}
+
+.input-num-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-num-container-details {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.txt-drop-item-details {
+    flex-direction: column;
+    width: fit-content;
+    height: 42px;
+    flex-grow: 115;
+}
+
+.stay-desc-details {
+    color: rgb(34, 34, 34);
+    font-size: 12px;
+    font-weight: 400;
+    line-break: strict;
+    line-height: 16px;
+    margin-bottom: 16px;
+    text-align: left
+}
+
+.drop-item-details {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+    justify-content: start;
+    width: 290px;
+
+    & .input-num {
+        flex-grow: 1;
+        justify-self: end;
+        align-items: center;
+        color: rgb(34, 34, 34);
+        display: inline-flex;
+        font-size: 16px;
+        font-weight: 400;
+        height: 32px;
+        justify-content: space-between;
+        line-break: strict;
+        line-height: 20px;
+        pointer-events: auto;
+        width: 104px !important;
+        -moz-box-align: center;
+        justify-self: flex-end;
+
+        & span {
+            font-size: 16px;
+            width: fit-content;
+        }
+    }
+}
+
+.search-area-text-Bold-details {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    padding-bottom: 4px !important;
+    font-weight: 600 !important;
+    width: fit-content;
+}
+
+.inc-btn-details {
+    align-items: center;
+    background-attachment: scroll;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    border-bottom-color: rgb(176, 176, 176);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(176, 176, 176);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(176, 176, 176);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(176, 176, 176);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: rgb(113, 113, 113);
+    cursor: pointer;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 400;
+    height: 32px;
+    justify-content: center;
+    line-break: strict;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(113, 113, 113);
+    outline-style: none;
+    outline-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    pointer-events: auto;
+    text-align: center;
+    text-decoration-color: rgb(113, 113, 113);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    touch-action: manipulation;
+    width: 32px;
+    -moz-box-align: center;
+    -moz-box-flex: 0;
+    -moz-box-pack: center
+}
+
+.inc-btn-details:hover {
+    font-weight: 800;
+    color: black;
+    border-width: 2px;
+    border: black 1px solid;
+}
+
+.close-drop {
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 800;
+    line-break: strict;
+    line-height: 20px;
+    margin-left: 248.3333px;
+    margin-right: 0px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.el-date-table td.end-date .el-date-table-cell__text,
+.el-date-table td.start-date .el-date-table-cell__text {
+    background-color: rgba(60, 56, 56, 0.933);
+}
+
+.el-date-table td.today .el-date-table-cell__text:hover {
+    color: rgb(34, 34, 34);
+    //     font-weight: 700;
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+    color: rgb(34, 34, 34);
+    //     font-weight: 700;
+}
+
+.el-date-table .el-date-table-cell__text:hover {
+    color: rgb(53, 44, 44);
+    // font-weight: 700;
+}
+
+.el-date-table-cell:hover {}
+
+.el-date-table td.available:hover {
+
+    color: rgb(53, 44, 44);
+}
+
+.host-info-modal-container {
+    // border: 1px solid rgb(181, 79, 79);
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .img-txt-holder-left-bar {
+        width: 50%;
+        padding-left: 30px;
+
+
+    }
+
+    .info-reservation-right-bar{
+        width: 50%;
+        padding-right: 30px;
+    }
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 800px;
+
+}
+
+
+.title-reservation {
+    padding-bottom: 30px;
+
+
+}
+
+.host-reservation {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    color: rgb(34, 34, 34) !important;
+    font-family: "Airbnb-bold";
+    padding-bottom: 25px;
+
+}
+
+.info-reservation {
+    padding-bottom: 60px;
+}
+
+
+.trip-details-holder {
+    .svg-logo {
+        position: relative;
+        top: 0px;
+        right: -685px;
+    }
+}
+
+.reservation {
+    h2 {
+        font-size: 37px;
+        font-family: 'Airbnb-bold';
+
+    }
+
+    .code-holder {
+        font-size: 20px;
+        margin-top: 0;
+
+        .code-reservation {
+            font-size: 25px;
+        }
+    }
+}

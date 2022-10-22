@@ -1,0 +1,41 @@
+.stay-list-container {}
+
+.stay-list {
+    padding-top: 15px;
+    display: grid;
+    grid-gap: 40px 24px;
+}
+
+@media only screen and (min-width:550px) {
+    .stay-list {
+        grid-template-columns: repeat(2, minmax(260px, 350px));
+
+    }
+}
+
+@media only screen and (min-width:950px) {
+    .stay-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+}
+
+@media only screen and (min-width:1128px) {
+    .stay-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    }
+}
+
+@media only screen and (min-width:1606px) {
+    .stay-list {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    }
+}
+
+
+
+.list-container {
+    align-content: center;
+}

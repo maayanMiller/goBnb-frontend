@@ -1,0 +1,121 @@
+.main-reviews-container {
+    border-bottom: 1px solid #dfdddd;
+    .title {
+        color: $title-txt-clr;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 48px;
+        margin-bottom: 32px;
+    }
+}
+
+.reviews-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h4 {
+        color: $title-txt-clr;
+        font-size: 16px;
+        font-family: 'Airbnb-medium';
+        display: inline-block;
+    }
+
+    span {
+        color: $title-txt-clr;
+        font-size: 12px;
+        font-family: 'Airbnb-medium';
+        margin-left: 6px;
+    }
+
+    .holder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 95px;
+    }
+}
+
+.bar {
+    width: 120px;
+    background-color: #ddd;
+    height: 4px;
+    display: inline-block;
+    margin-left: 12px;
+    border-radius: 5%;
+}
+
+.fill {
+    border-radius: 5%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: $title-txt-clr;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .review {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        height: 156px;
+
+        .rev-head {
+            // height: 40px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .rev-title {
+                height: 40px;
+                margin-left: 7px;
+
+                .name {
+                    color: $title-txt-clr;
+                    font-size: 16px;
+                    font-family: 'Airbnb-medium';
+                    margin: 5px 0;
+                }
+
+                .date {
+                    color: rgb(72, 72, 72);
+                    font-size: 14px;
+                    margin: 0;
+
+                }
+
+            }
+        }
+
+        p {
+            margin-top: 16px;
+            margin-right: 95px;
+            line-height: 24px;
+            color: $title-txt-clr;
+            font-size: 16px;
+            .href-more{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.show-all-btn {
+    font-family: 'Airbnb-bold';
+    padding: rem(13px) rem(23px);
+    border: 1px solid $title-txt-clr;
+    border-radius: rem(8px);
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 48px;
+    &:hover{
+        background-color: #f7f7f7;
+    }
+
+}

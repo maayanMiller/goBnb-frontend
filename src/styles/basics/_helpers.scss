@@ -1,0 +1,113 @@
+// Flex 
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex.inline-flex {
+    display: inline-flex;
+}
+
+// List 
+.clean-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Text 
+.vertical-text {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+.tag-text {
+    color: $clr1;
+    text-transform: uppercase;
+    @include type(boldCondensed);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold-trip {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    color: #6b6b6b;
+    font-weight: 400;
+    text-transform: capitalize;
+
+}
+
+.vl {
+    border-left: 2px solid $clr9;
+    height: 50%;
+    align-self: center;
+
+}
+
+.hl {
+    border-bottom: 1px solid $clr9;
+    width: 100vw;
+    height: fit-content;
+}
+
+// .width-100 {
+//     width: 98.8vw;
+//     justify-content: center;
+//     display: flex
+// }
+
+.href-more {
+    color: $title-txt-clr;
+    font-family: 'Airbnb-bold';
+    font-size: 16px;
+    display: block;
+
+    img {
+        width: 12px;
+        margin-left: 3px;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.sticky-bottom {
+
+    z-index: 1000;
+    background-color: #fff;
+}
+
+// Aspect ratios
+.ratio-16-9 {
+    @include aspect-ratio(100, 56);
+}
+
+.ratio-square {
+    @include aspect-ratio(100, 100);
+}
+
+.ratio-card {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    @include aspect-ratio(100, 80);
+}
+
+.ratio-poster {
+    @include aspect-ratio(100, 150);
+}

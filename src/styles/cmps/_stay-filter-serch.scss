@@ -1,0 +1,307 @@
+.picker-date {
+  &.el-range-editor {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    width: em(120px) !important;
+    height: 5px !important;
+    padding: 0px !important;
+  }
+
+  &.el-input__wrapper {
+    justify-content: flex-start !important;
+  }
+
+  &.el-range-input {
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 1666px;
+    line-height: 18px;
+    font-weight: 600;
+
+    &:focus {
+      outline: 0 !important;
+    }
+  }
+}
+
+.el-range-editor {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.el-date-editor .el-range__icon {
+  display: none !important;
+}
+
+.el-range-separator {
+  display: none !important;
+}
+
+.picker-date.from>input:nth-child(4) {
+  display: none !important;
+  width: 0px !important;
+}
+
+.picker-date.to>input:nth-child(2) {
+  display: none !important;
+  width: 0px !important;
+}
+
+.large-area input {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: 'Airbnb-book';
+  color: '#717171';
+  text-overflow: ellipsis;
+  //width: 60px;
+  line-break: strict;
+  text-align: left;
+
+  color: rgb(113, 113, 113);
+}
+
+.large-area-span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-family: 'Airbnb-book';
+  padding-bottom: 2px;
+  text-align: start;
+}
+
+.search-area.large-area {
+  padding-left: 30px;
+  height: 64px;
+
+  &:hover {
+    background-color: $clr9;
+  }
+
+  &.active {
+    background-color: $clr3;
+    //box-shadow: 8px 10px 20px 0px rgb(0 0 0 / 8%), -9px -1px 12px rgb(0 0 0 / 5%);
+    //box-shadow: gray 0px 0px 5px, gray 0px 0px 5px; //border-radius: 2px;
+    box-shadow: 10px 7px 32px -10px rgba(176, 169, 176, 1);
+  }
+
+  &>input {
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &.destination {
+    width: 328px;
+  }
+
+  &.guests {
+    display: flex;
+    width: 261px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &.date {
+
+    width: 130px;
+    height: 64px;
+    padding-top: 13px;
+  }
+}
+
+.guests-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.action-search {
+  background-color: $primary-clr;
+  color: $clr3;
+  border-radius: 5em;
+  height: 83%;
+  margin-right: em(8px);
+  margin-bottom: em(3px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 em(20px) 0 em(20px);
+}
+
+.action-search>img {
+  width: em(20px);
+}
+
+.action-search>span {
+  font-weight: 200;
+  font-family: 'Airbnb-book';
+  font-size: large;
+  margin-left: 10px;
+  letter-spacing: normal;
+}
+
+.drop-menu-container {
+  height: 2900vh;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  z-index: 012;
+  opacity: 0.3;
+  top: 143px;
+  right: 0;
+}
+
+.drop-menu {
+  // height: 100px;
+  position: absolute;
+  bottom: -415px;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  height: 403px;
+  width: 406px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  left: -150px;
+  line-height: 22px;
+  padding: 5px 16px;
+  text-align: start;
+
+
+
+  & .input-num {
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 400;
+    height: 32px;
+    justify-content: space-between;
+    line-break: strict;
+    line-height: 20px;
+    pointer-events: auto;
+    text-align: left;
+    width: 104px;
+    -moz-box-align: center;
+
+    & span {
+      font-size: 16px
+    }
+
+  }
+}
+
+
+
+.txt-drop-item {
+  flex-direction: column;
+  justify-self: start;
+  width: 250px;
+}
+
+.drop-item {
+  width: 330px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.inc-btn {
+  align-items: center;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto;
+  border-bottom-color: rgb(176, 176, 176);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(176, 176, 176);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(176, 176, 176);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(176, 176, 176);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: rgb(113, 113, 113);
+  cursor: pointer;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 400;
+  height: 32px;
+  justify-content: center;
+  line-break: strict;
+  line-height: normal;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  outline-color: rgb(113, 113, 113);
+  outline-style: none;
+  outline-width: 0px;
+  // padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  pointer-events: auto;
+  text-align: center;
+  text-decoration-color: rgb(113, 113, 113);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  touch-action: manipulation;
+  width: 32px;
+  -moz-box-align: center;
+  -moz-box-flex: 0;
+  -moz-box-pack: center
+}
+
+.inc-btn:hover {
+  font-weight: 800;
+  color: black;
+  border-width: 2px;
+  border: black 1px solid;
+}
+
+.el-date-editor .el-range-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  padding-bottom: 12px;
+  width: 100%;
+  text-align: start;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}

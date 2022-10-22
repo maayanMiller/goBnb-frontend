@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    align-self: center;
+    // max-width: 1600px;
+    font-family: 'Airbnb-book';
+}
+
+:root {
+    width: 100%;
+    line-height: 1.43;
+    color: $primary-txt-clr;
+    font-size: 14px;
+    font-family: 'Airbnb-book';
+
+    a {
+        text-decoration: underline;
+    }
+
+    img {
+        vertical-align: unset; //TODO ???????
+    }
+}

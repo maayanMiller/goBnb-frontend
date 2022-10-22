@@ -1,0 +1,119 @@
+.stay-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+
+    position: sticky;
+    top: 70px;
+    background-color: #fff;
+}
+
+.btn.btn-default {
+    width: 91px;
+    height: 48px;
+    border-radius: em(10px);
+    margin-left: 40px;
+    margin-bottom: 23px;
+    background-image: url('src/assets/fonts/airbnb-label-imgs/settings-sliders.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    text-align: end;
+    padding: 16px;
+    font-family: 'Airbnb-bold';
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    border: solid $clr9 1px;
+
+    &:hover {
+        background-color: $clr3;
+    }
+}
+
+.sticky-style {
+    border-top: 0.8px solid $clr9;
+    border-bottom: 0.8px solid $clr9;
+    padding-top: 0px;
+    // position: sticky;
+}
+
+.border-top {
+    // padding-top: 30px;
+    border-top: 0.8px solid $clr9;
+}
+
+
+.el-button.is-text:not(.is-disabled):focus,
+.el-button.is-text:not(.is-disabled):hover {
+    background-color: transparent;
+}
+
+.el-button.is-text {
+    color: #222;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
+
+
+    border-radius: 12px;
+    border: 1px solid rgb(221, 221, 221);
+
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+
+    font-size: 16px;
+    height: 48px;
+    width: 95.5px;
+    line-break: strict;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-width: 48px;
+    outline-color: rgb(34, 34, 34);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 7px;
+    touch-action: manipulation;
+    margin-bottom: 18px;
+    margin-left: 15px;
+
+}
+
+.el-button:focus,
+.el-button:hover {
+    color: #222;
+    border-color: rgb(219, 219, 219);
+
+    background-color: var(--el-button-hover-bg-color);
+    outline: 0;
+}
+
+
+.el-button>span:nth-child(1) {
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-break: strict;
+    line-height: 16px;
+    transform: matrix(1, 0, 0, 1, 0, -1)
+}
+
+.filter-icon {
+    // display: block;
+    height: 10px;
+    width: 10px;
+    fill: currentColor;
+    margin-right: 8px;
+
+}

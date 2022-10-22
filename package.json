@@ -1,0 +1,40 @@
+{
+	"name": "frontend",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"axios": "^0.26.1",
+		"babel-loader": "^8.2.5",
+		"bootstrap": "^3.4.1",
+		"chart.js": "^3.8.0",
+		"element-plus": "^2.2.10",
+		"font-face": "^2.3.4",
+		"fs": "^0.0.1-security",
+		"i": "^0.3.7",
+		"npm": "^8.15.0",
+		"require": "^0.4.4",
+		"sass": "^1.49.9",
+		"socket.io-client": "^4.4.1",
+		"svgo": "^2.8.0",
+		"uiv": "^2.0.1",
+		"vue": "^3.2.31",
+		"vue-carousel": "^0.18.0",
+		"vue-chart-3": "^3.1.8",
+		"vue-router": "^4.1.2",
+		"vuex": "^4.0.2",
+		"webpack": "^5.73.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^2.3.3",
+		"unplugin-auto-import": "^0.6.4",
+		"unplugin-vue-components": "^0.18.0",
+		"vite": "^2.8.4",
+		"vue-template-compiler": "^2.7.8"
+	}
+}

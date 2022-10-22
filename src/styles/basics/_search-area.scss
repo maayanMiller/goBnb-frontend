@@ -1,0 +1,29 @@
+.search-area {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5em;
+    text-align: center;
+    justify-content: center;
+    padding-left: em(10px);
+    // padding-right: em(10px);
+}
+
+.search-area-text-light {
+    font-weight: 400;
+    line-height: 18px;
+    line-break: strict;
+    text-align: left;
+    font-size: 14px;
+    color: rgb(113, 113, 113);
+    width: fit-content;
+}
+
+.search-area-text-Bold {
+    font-weight: 600;
+    line-height: 20px;
+    line-break: strict;
+    font-size: 16px;
+    color: rgb(113, 113, 113);
+    padding-bottom: 6px;
+    text-align: left;
+}

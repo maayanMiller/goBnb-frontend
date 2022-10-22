@@ -1,0 +1,26 @@
+td {
+    border: 1px solid rgb(9, 1, 1);
+    border-top: 0;
+}
+
+th {
+    border: 1px solid rgb(37, 0, 0);
+}
+
+.backoffice-section {
+    border: 1px solid rgb(213, 26, 26);
+    display: flex;
+    flex-direction: column;
+    // justify-content: center; 
+    align-items: center;
+    // width: 1800px;
+    // border-bottom-width: 1px;
+    // border-bottom-color: rgb(233, 232, 232);
+    // height: 80px;
+    height: 90vh;
+    width: 100%;
+}
+
+.recent-orders-table {
+    width: 1120px;
+}

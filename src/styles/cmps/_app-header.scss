@@ -1,0 +1,260 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(233, 232, 232);
+  height: 80px;
+  width: 100%;
+}
+
+.like-details-layout {
+  // position: absolute;
+  display: grid;
+  grid-template-columns: minmax($layoutPadding, 1fr) minmax(550px, 1120px) minmax($layoutPadding, 1fr);
+
+  >* {
+    grid-column: 2;
+    width: 100%;
+  }
+
+
+}
+
+.sticky-header {
+  // position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.none {
+  display: none;
+}
+
+.main-header-logo {
+  text-decoration: none;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 300px;
+}
+
+.svg-logo {
+  margin-right: 10px;
+  display: block;
+  width: 30px;
+  height: 32px;
+  fill: $clr1;
+}
+
+.logo-text {
+  font-family: 'Airbnb-bold';
+  text-decoration: none;
+  font-size: 21px;
+  color: $clr1;
+  font-weight: 900;
+  // padding-right: 346px;
+}
+
+.header-container {
+  margin: 0;
+
+  &.open {
+    transition: all 0.3s ease;
+  }
+}
+
+.fullSearch-enter-active {
+  transition: opacity 0.3s ease;
+}
+
+.fullSearch-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fullSearch-enter-from {
+  opacity: 0;
+}
+
+.fullSearch-leave-to {
+  opacity: 0;
+}
+
+.fullSearch-enter-to {
+  opacity: 1;
+}
+
+.fullSearch-leave-from {
+  opacity: 1;
+}
+
+
+.search-area {
+  &.destinations {
+    flex-grow: 1;
+  }
+
+  &.date {
+    flex-grow: 1;
+  }
+
+  &.guests {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.search-area-text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.search-icon-container {
+  background-color: $primary-clr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: em(38.8px);
+  height: em(38.8px);
+  border-radius: 50%;
+  margin-left: 10px;
+
+  //margin-right: 10px;
+  //justify-self: flex-start;
+  .search-icon {
+    width: em(16px);
+  }
+}
+
+.user-settings-container {
+  display: flex;
+  width: 300px;
+  justify-self: end;
+  justify-content: flex-end;
+
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border-radius: 25px;
+  padding: 8px;
+
+  &:hover {
+    background-color: $clr8;
+  }
+
+  .host-btn {
+    color: $primary-txt-clr;
+    text-decoration: none;
+    width: 110px;
+    //height: 18px;
+    font-family: 'Airbnb-medium';
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 2px;
+    text-align: center;
+  }
+}
+
+.user-btn {
+  width: 79px;
+  border: 1px $clr9 solid;
+  justify-content: space-between;
+  border-radius: 25px;
+  align-items: center;
+  margin-left: 14px;
+  padding: 8px;
+
+  .burger-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+    margin-left: 5px;
+  }
+
+  .user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: -3px;
+  }
+
+  .user-svg {
+    // border: 1px solid rgb(176, 25, 25);
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    background-color: $clr3;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  }
+}
+
+.globe-icon {
+  width: 16px;
+
+  &:hover {
+    background-color: $clr9;
+  }
+
+  .img {
+    width: 100%;
+    z-index: 20;
+    padding: 16px;
+    background-color: rgb(227, 196, 222);
+  }
+}
+
+.main-header-nav {
+  .main-nav {
+    a {
+      @include btn($type: light, $padding: em(16px) em(20px));
+    }
+  }
+}
+
+.li-header {
+  display: flex;
+  align-items: center;
+}
+
+.horLine {
+  background-color: #dfdddd;
+  width: 100%;
+  height: 1px;
+}
+
+.drop-menu-user {
+  background-color: #fff;
+
+  border-radius: 4px !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px !important;
+  min-width: 245px !important;
+  padding: 16px !important;
+  position: absolute !important;
+  text-align: left !important;
+  z-index: 1000 !important;
+  width: fit-content;
+  top: 80px;
+}
