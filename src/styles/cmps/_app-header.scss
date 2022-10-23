@@ -6,6 +6,7 @@
   border-bottom-color: rgb(233, 232, 232);
   height: 80px;
   width: 100%;
+
 }
 
 .like-details-layout {
@@ -25,7 +26,7 @@
   // position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  // z-index: 1000;
   background-color: #fff;
 }
 
@@ -33,7 +34,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   background-color: #fff;
 }
 
@@ -165,10 +166,10 @@
     text-decoration: none;
     width: 110px;
     //height: 18px;
-    font-family: 'Airbnb-medium';
+    font-family: 'Airbnb-book';
     font-size: 14px;
     line-height: 18px;
-    font-weight: 400;
+    font-weight: 600;
     padding: 2px;
     text-align: center;
   }
@@ -220,7 +221,7 @@
 
   .img {
     width: 100%;
-    z-index: 20;
+    // z-index: 20;
     padding: 16px;
     background-color: rgb(227, 196, 222);
   }
@@ -248,13 +249,34 @@
 .drop-menu-user {
   background-color: #fff;
 
-  border-radius: 4px !important;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px !important;
-  min-width: 245px !important;
-  padding: 16px !important;
-  position: absolute !important;
-  text-align: left !important;
-  z-index: 1000 !important;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+  min-width: 240px;
+  padding: 16px;
+  position: absolute;
+  text-align: left;
+  z-index: 1;
   width: fit-content;
   top: 80px;
+  font-family: 'Airbnb-book';
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  :first-child {
+    font-weight: 600;
+    padding-top: 12px;
+
+
+  }
+
+  div {
+    cursor: pointer;
+    height: 42px;
+  }
+
+  :last-child {
+    border-top: 1px solid black;
+    padding-top: 14px;
+  }
 }

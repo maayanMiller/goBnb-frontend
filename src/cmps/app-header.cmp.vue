@@ -81,12 +81,16 @@
           </div>
           <Transition name="fullSearch">
             <div v-if="dropOpen" class="drop-menu-user">
-              <div @click="goToMyTrip">my trips</div>
               <div @click="setLogin">login</div>
+              <div @click="goToMyTrip">my trips</div>
               <div @click="dropOpen = !dropOpen">Close</div>
             </div>
           </Transition>
         </div>
+        <Transition name="logIn">
+          <logIn v-if="displayLogIn"></logIn>
+
+        </Transition>
 
       </div>
 
@@ -104,6 +108,7 @@
 
 import { eventBus } from "../services/event-bus.service"
 import stayFilterSearch from "./stay-filter-search.cmp.vue"
+import logIn from "./log-in.cmp.vue"
 import { userService } from "../services/user.service"
 
 export default {
@@ -113,6 +118,7 @@ export default {
       displaySearch: false,
       user: null,
       dropOpen: false,
+      displayLogIn: false,
     }
   },
   computed: {
@@ -177,6 +183,9 @@ export default {
   },
   components: {
     stayFilterSearch,
+    logIn
+
+
   },
   methods: {
     showDefaultUserImg() {
@@ -197,7 +206,8 @@ export default {
     },
     setLogin() {
       this.dropOpen = !this.dropOpen
-      this.$router.push("/login")
+      this.displayLogIn = !this.displayLogIn
+      // this.$router.push("/login")
     },
     goToMyTrip() {
       this.dropOpen = !this.dropOpen

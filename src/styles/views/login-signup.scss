@@ -1,0 +1,133 @@
+.logged-in-modal {
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    right: 700px;
+    width: 570px;
+    border-radius: 8px;
+
+}
+
+.log-in-modal-header {
+    display: flex;
+    flex: 0 0 auto;
+    // align-items: center;
+    padding: 20px 10px 12px;
+    min-height: 48px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 1px solid rgb(190, 186, 186);
+
+    :last-child {
+        padding-left: 185px;
+    }
+
+}
+
+.logged-in-user {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    padding-top: 12px;
+    padding: 20px 8px 12px;
+
+    button {
+        margin-top: 10px;
+    }
+
+}
+
+.log-in-signup {
+    padding: 20px 8px 12px;
+
+
+    p {
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: 600;
+    }
+
+    select {
+        width: 520px;
+        height: 53px;
+        background-color: #fff;
+        font-size: 16px;
+        color: rgb(34, 34, 34);
+        font-family: "Airbnb-book";
+    }
+
+    option {
+        font-size: 16px;
+        color: rgb(34, 34, 34);
+        font-family: "Airbnb-book";
+    }
+
+    input {
+        font-family: "Airbnb-book";
+        width: 520px;
+        height: 53px;
+        font-size: 16px;
+        color: rgb(34, 34, 34);
+        padding-left: 8px;
+    }
+
+    .input-name {
+        // border-top: none;
+        // border-bottom: none;
+    }
+
+    .input-password {
+        border-top: none;
+        border-bottom: none;
+        border-color: rgb(34, 34, 34);
+        border-width: 0.5px;
+    }
+
+    .input-user {
+        // border-top: none;
+        // border-bottom: none;
+    }
+
+    form {
+        margin-bottom: 25px;
+    }
+}
+
+.btn-hover-login {
+    width: 99.5%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 8px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover-login:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover-login:focus {
+    outline: none;
+}
+
+.btn-hover-login.color-10 {
+    background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+}

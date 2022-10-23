@@ -199,7 +199,7 @@
     padding: 16px !important;
     position: absolute !important;
     text-align: left !important;
-    z-index: 999 !important;
+    // z-index: 999 !important;s
     width: fit-content;
 }
 
@@ -480,7 +480,7 @@
 
     }
 
-    .info-reservation-right-bar{
+    .info-reservation-right-bar {
         width: 50%;
         padding-right: 30px;
     }

@@ -1,64 +1,57 @@
 <template>
-  <div class="container logged-in-page">
+  <div class="container logged-in-modal">
+    <header class="log-in-modal-header">
+      <div class="exit-modal">X</div>
+      <p>
+        Log in or sign up
+      </p>
+    </header>
     <p>{{ msg }}</p>
 
     <div class="logged-in-user" v-if="loggedinUser">
       Welcome back
       {{ loggedinUser.username }}
-      <button @click="doLogout">Logout</button>
 
+
+      <button class="btn-hover-login color-10" @click="doLogout">Logout</button>
     </div>
-    <div v-else>Welcome to Gobnb</div>
-    <div>
-      <h2>Login</h2>
+    <div class="logged-in-user" v-else>Welcome to Gobnb</div>
+    <div class="log-in-signup">
+      <p>Login</p>
       <form @submit.prevent="doLogin">
         <select v-model="loginCred.username">
-          <option value="" selected>Select User</option>
+          <option value="" disabled selected>Select User</option>
           <option v-for="user in users" :key="user._id" :value="user.username">
             {{ user.username }}</option>
         </select>
-        <!-- <input type="text" v-model="loginCred.username" placeholder="User name" />
-        <input
-          type="text"
-          v-model="loginCred.password"
-          placeholder="Password"
-        /> -->
-        <button>Login</button>
+        <button v-if="loginCred.username"
+          class="btn-hover-login color-10">Login</button>
       </form>
-      <p class="mute">user1 or admin, pass:123 </p>
       <form @submit.prevent="doSignup">
-        <h2>Signup</h2>
-        <input type="text" v-model="signupCred.fullname"
+        <p>Signup</p>
+        <input class="input-name" type="text" v-model="signupCred.fullname"
           placeholder="Your full name" />
-        <input type="text" v-model="signupCred.password"
+        <input class="input-password" type="text" v-model="signupCred.password"
           placeholder="Password" />
-        <input type="text" v-model="signupCred.username"
+        <input class="input-user" type="text" v-model="signupCred.username"
           placeholder="Username" />
-        <button>Signup</button>
+        <button class="btn-hover-login color-10">Signup</button>
+
       </form>
     </div>
-    <hr />
-    <details>
-      <summary>
-        Admin Section
-      </summary>
-      <ul>
-        <li v-for="user in users" :key="user._id">
-          <pre>{{ user }}</pre>
-          <button @click="removeUser(user._id)">x</button>
-        </li>
-      </ul>
-    </details>
+
+
   </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 export default {
   name: 'login-signup',
   data() {
     return {
       msg: '',
-      loginCred: { username: 'user1', password: '123' },
+      loginCred: { username: null, password: '123' },
       signupCred: { username: '', password: '', fullname: '' },
     }
   },
