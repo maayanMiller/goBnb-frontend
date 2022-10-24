@@ -87,9 +87,9 @@
             </div>
           </Transition>
         </div>
-        <Transition name="logIn">
-          <logIn v-if="displayLogIn"></logIn>
 
+        <Transition name="logIn">
+          <logIn v-if="displayLogIn" :user="user"></logIn>
         </Transition>
 
       </div>
@@ -189,11 +189,9 @@ export default {
   },
   methods: {
     showDefaultUserImg() {
-      this.user = userService.getLoggedinUser()
       return (!this.user) ? ' ' : 'fill: #FF385C'
     },
     showLogedinUserImg() {
-      this.user = userService.getLoggedinUser()
       if (this.user)
       {
         return (!this.user.imgUrl) ? 'display: none' : ' '
@@ -219,7 +217,16 @@ export default {
 
   },
   created() {
+    this.user = userService.getLoggedinUser()
     this.trip = this.$store.getters.currentTrip
+    console.log(this.$route.name);
   },
+  mounted() {
+    eventBus.on('close-modal', () => {
+      this.displayLogIn = !this.displayLogIn
+      this.user = userService.getLoggedinUser()
+
+    })
+  }
 }
 </script>
