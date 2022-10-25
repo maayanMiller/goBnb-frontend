@@ -15,7 +15,8 @@
             <span class="check">Check in</span>
             <!-- < class="picker-date from"></ -->
             <el-date-picker class="picker-date from" v-model="trip.dates"
-              type="daterange" start-placeholder="Check in" />
+              format="DD-MM-YYYY" type="daterange"
+              start-placeholder="Check in" />
           </div>
 
           <div @click="onOpenDateTo" class="date-details-cell">
@@ -23,7 +24,8 @@
 
             <el-date-picker @click="show = true"
               class="picker-date to bold-trip" v-model="trip.dates"
-              type="daterange" end-placeholder="Check out" />
+              format="DD-MM-YYYY" type="daterange"
+              end-placeholder="Check out" />
           </div>
         </div>
         <div class="gusts-details-container">
@@ -315,7 +317,6 @@ export default {
     return {
       reservationCode: null,
       //logedUser: null,
-
       show: false,
       trip: null,
       dates: null,
@@ -428,8 +429,9 @@ export default {
     }
   },
   created() {
-    this.setDates()
+    // this.setDates()
     this.trip = this.$store.getters.currentTrip
+    console.log(' this.trip:', this.trip)
     this.TotalDays = this.getNights()
     this.stayPrice = this.stay.price
     this.fee = Math.round(this.stayPrice * 1.17)

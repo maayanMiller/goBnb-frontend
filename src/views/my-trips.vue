@@ -4,10 +4,11 @@
     <span style="marging-bottom: 15px; font-size: 18px">Upcoming
       reservations</span>
 
-    <section class="stay-list">
+    <section class="trip-list">
       <div class="trip-card-holder" v-for="trip in myTrips" :key="trip._id">
-        <div class="trip-card-img-container"><img :src="stayPreviewImage(trip)"
-            class="trip-card-img" /></div>
+        <div class="trip-card-img-container">
+          <img :src="stayPreviewImage(trip)" class="trip-card-img" />
+        </div>
         <div class="trip-text-container">
           <div class="trip-host-details bold">{{ trip.hostName }}
             <div style="opacity: 0.6">{{ trip.hostType }} hosted by

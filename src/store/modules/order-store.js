@@ -51,6 +51,7 @@ export default {
 		},
 		saveCurrentTrip(state, {trip}) {
 			state.trip = trip
+			state.trip.dates = trip.dates
 		},
 		addCurrentTrip(state) {
 			state.trip = tripService.query()

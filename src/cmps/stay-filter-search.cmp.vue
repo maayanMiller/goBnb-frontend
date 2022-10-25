@@ -6,7 +6,7 @@
       <div class="search-area large-area destination" @click="onOpenWhere"
         :class="{ active: selectedSrchArea === 'destination' }">
         <span class="large-area-span">Where</span>
-        <input v-model="filterBy.country" type="text"
+        <input autofocus v-model="filterBy.country" type="text"
           placeholder="Search destinations">
       </div>
 
@@ -124,7 +124,6 @@
 export default {
   data() {
     return {
-
       dropOpen: false,
       adults: 0,
       children: 0,
@@ -140,7 +139,7 @@ export default {
   created() {
     this.trip = this.$store.getters.currentTrip
     console.log(' this.trip:', this.trip)
-    // this.dates = this.trip.dates
+    this.dates = this.trip.dates
     this.adults = this.trip.guests.adults
     this.children = this.trip.guests.children
     this.infants = this.trip.guests.infants
@@ -222,4 +221,5 @@ export default {
 
 </script>
 <style scoped>
+
 </style>
