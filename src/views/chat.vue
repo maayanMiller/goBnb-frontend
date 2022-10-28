@@ -2,7 +2,7 @@
   <div class="chat-container">
     <h1>gobnb</h1>
     <h4>Hello {{ userName }}</h4>
-    <h4>write to {{ hostName }}</h4>
+    <h4>write to {{ stayName }}</h4>
     <ul>
       <li v-for="(msg, idx) in msgs" :key="idx">
         <span>{{ msg.from }}:</span>{{ msg.txt }}
@@ -25,18 +25,18 @@ export default {
     return {
       msg: { from: 'Guest', txt: '' },
       msgs: [],
-      hostName: null,
+      stayName: null,
       userName: null,
 
     }
   },
   created() {
     this.userName = userService.getLoggedinUser().fullname
-    this.hostName = this.$route.params.name
+    this.stayName = this.$route.params.name
     console.log(this.userName)
-    console.log(this.hostName)
+    console.log(this.stayName)
 
-    socketService.emit(SOCKET_EMIT_SET_TOPIC, this.hostName)
+    socketService.emit(SOCKET_EMIT_SET_TOPIC, this.stayName)
     socketService.on(SOCKET_EVENT_ADD_MSG, this.addMsg)
   },
   destroyed() {

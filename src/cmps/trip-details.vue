@@ -338,7 +338,7 @@ export default {
       const trip = {
         stayId: this.stay._id,
         hostId: this.stay.host._id, //use "id" instead of mongoDB "_id", this way we will control its value
-        hostName: this.stay.name,
+        stayName: this.stay.name,
         hostedBy: this.stay.host.fullname,
         hostType: this.stay.propertyType,
         stayPreviewImg: this.stay.imgUrls[0],

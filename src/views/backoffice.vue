@@ -1,29 +1,35 @@
 <template>
-	<section class="backoffice-section">
+	<section class="backoffice-section details-layout">
 		<!-- <pre>{{ orders }}}</pre> -->
-		<table class="recent-orders-table">
-			<tr class="ter">
-				<th>Booked</th>
-				<th>Check in/Check out</th>
-				<th>Nights</th>
-				<th>Price</th>
-				<th>Guests</th>
-				<th>Main guest</th>
-				<th>Status</th>
-				<th>Actions</th>
-			</tr>
-			<tr v-for="(order, index) in orders" :key="order._id">
-				<td>{{ booked(order) }}</td>
-				<td>{{ check(order) }}</td>
-				<td>{{ nights(order) }}</td>
-				<td>{{ price(order) }}</td>
-				<td>{{ guests(order) }}</td>
-				<td>
+		<!-- <div class="recent-orders-table details-layout">
+			<div class="table-header">
+				<div>Booked</div>
+				<div>Stay</div>
+				<div>Check in/Check out</div>
+				<div>Nights</div>
+				<div>Price</div>
+				<div>Guests</div>
+				<div>Main guest</div>
+				<div>Status</div>
+				<div>Actions</div>
+			</div>
+			<div class="table-body" v-for="(order, index) in orders" :key="order._id">
+				<div>{{ booked(order) }}</div>
+				<div>
+					<p>{{ order.stayName }}</p>
+					<p>{{ order.destination.country }}</p>
+					<p>{{ order.destination.address }}</p>
+				</div>
+				<div>{{ check(order) }}</div>
+				<div>{{ nights(order) }}</div>
+				<div>{{ price(order) }}</div>
+				<div>{{ guests(order) }}</div>
+				<div>
 					<img class="main-guest-img" :src="order.mainGuest.imgUrl" />
 					<p class="back-p">{{ order.mainGuest.fullName }}</p>
-				</td>
-				<td>{{ order.status }}</td>
-				<td>
+				</div>
+				<div>{{ order.status }}</div>
+				<div>
 					<div class="table-button-container">
 						<button class="table-button approve"
 							@click="handleApprove(index, order)">
@@ -34,9 +40,60 @@
 							Decline
 						</button>
 					</div>
-				</td>
-			</tr>
-		</table>
+				</div>
+			</div>
+		</div> -->
+		<div class="divTable unstyledTable ">
+			<div class="divTableHeading">
+				<div class="divTableRow">
+					<div class="divTableHead">Booked</div>
+					<div class="divTableHead">Stay</div>
+					<div class="divTableHead">Check in/Check out</div>
+					<div class="divTableHead">Nights</div>
+					<div class="divTableHead">Price</div>
+					<div class="divTableHead">Guests</div>
+					<div class="divTableHead">Main guest</div>
+					<div class="divTableHead">Status</div>
+					<div class="divTableHead">Actions</div>
+				</div>
+			</div>
+			<div class="divTableBody">
+				<div class="divTableRow" v-for="(order, index) in orders"
+					:key="order._id">
+					<div class="divTableCell">{{ booked(order) }}</div>
+					<div class="divTableCell">
+						<p>{{ order.stayName }}</p>
+						<p>{{ order.destination.country }}</p>
+						<p>{{ order.destination.address }}</p>
+					</div>
+					<div class="divTableCell">{{ check(order) }}</div>
+					<div class="divTableCell">{{ nights(order) }}</div>
+					<div class="divTableCell">{{ price(order) }}</div>
+					<div class="divTableCell">{{ guests(order) }}</div>
+					<div class="divTableCell">
+						<img class="main-guest-img" :src="order.mainGuest.imgUrl" />
+						<p class="back-p">{{ order.mainGuest.fullName }}</p>
+					</div>
+					<div class="divTableCell ">
+						<div :class="statusLable(index)" class="table-button">
+							{{ order.status }}
+						</div>
+					</div>
+					<div class="divTableCell">
+						<div class="table-button-container">
+							<div class="table-button approve"
+								@click="handleApprove(index, order)">
+								Approve
+							</div>
+							<div class="table-button decline"
+								@click="handleDecline(index, order)">
+								Decline
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 </template>
 <script>
@@ -49,17 +106,19 @@ export default {
 			recentOrders: null,
 		}
 	},
+
 	created() {
 		this.loadOrders()
-
+	},
+	computed: {
 
 	},
-
 
 	methods: {
 		async loadOrders() {
 			var oneDay = 1000 * 60 * 60 * 24
 			this.orders = await this.$store.dispatch('loadOrders')
+			console.log('orders:', this.orders)
 			this.oldOrders = this.orders.filter(function (order) {
 				return (
 					(new Date().getTime() - new Date(order.orderDate).getTime()) / oneDay > 1 &&
@@ -72,6 +131,14 @@ export default {
 					order.status === 'pending'
 				)
 			})
+		},
+		statusLable(i) {
+			if (this.orders[i].status === 'approved') return 'approve'
+			if (this.orders[i].status === 'pending') return 'pending'
+			else
+			{
+				return 'decline'
+			}
 		},
 		// recentOrderDate(dates) {
 		// 	order.status === 'pending'

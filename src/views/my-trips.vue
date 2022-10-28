@@ -10,9 +10,12 @@
           <img :src="stayPreviewImage(trip)" class="trip-card-img" />
         </div>
         <div class="trip-text-container">
-          <div class="trip-host-details bold">{{ trip.hostName }}
+          <div class="trip-host-details bold">{{ trip.stayName }}
             <div style="opacity: 0.6">{{ trip.hostType }} hosted by
               {{ trip.hostedBy }}</div>
+            <div class="status">Status: <span :class="status(trip)">{{
+                trip.status
+            }}</span></div>
           </div>
 
           <div class="trip-details-container" style="align-items: center;">
@@ -98,6 +101,16 @@ export default {
     },
     stayPreviewImage(trip) {
       return `${import.meta.env.BASE_URL}images/${trip.stayPreviewImg}`
+    },
+    status(trip) {
+      console.log('i:', trip)
+      if (trip.status === 'approved') return 'approve'
+      // console.log('this.myTrips:', this.myTrips[i])
+      if (trip.status === 'pending') return 'pending'
+      else
+      {
+        return 'decline'
+      }
     }
   },
 }
