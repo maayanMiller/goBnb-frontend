@@ -112,9 +112,8 @@ export default {
 		async addReview(context, { review ,stay}) {
 		const st= {...stay}
 		st.reviews.unshift(review)
-			console.log('st:', st)
 			try {
-					// review = await reviewService.add(review)
+					review = await stayService.saveStay(st)
 					// context.commit({ type: 'addReview', review })
 					// context.dispatch({type: 'increaseScore'})
 

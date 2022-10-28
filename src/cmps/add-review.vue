@@ -1,5 +1,5 @@
 <template >
-  <h4>Add review to {{stay.host.fullname}} stay</h4>
+  <h4>Add review to {{ stay.host.fullname }} stay</h4>
   <textarea name="add-review" id="" cols="30" rows="10"
     v-model="newReview.txt"></textarea>
   <button @click="addReview">Add</button>
@@ -30,27 +30,28 @@ export default {
     async addReview() {
       this.loginUser = this.$store.getters.loggedinUser
       console.log('this.loginUser:', this.loginUser)
-      // this.newReview.at = new Date()
-      // this.newReview.by.fullname = this.loginUser.fullname
-      // this.newReview.by.imgUrl = this.loginUser.imgUrl
-      // this.newReview.by._id = this.loginUser._id
-      // try
-      // {
-      //   await this.$store.dispatch({ type: 'addReview', review: this.newReview.txt, stay: this.stay })
-      //   // showSuccessMsg('Review added')
-      //   this.newReview = {
-      //     at: null,
-      //     by: {
-      //       fullname: '',
-      //       imgUrl: '',
-      //       _id: '',
-      //     },
-      //     txt: ''
-      //   }
-      // } catch (err)
-      // {
-      //   // showErrorMsg('Cannot add review')
-      // }
+      this.newReview.at = Date.now()
+      this.newReview.by.fullname = this.loginUser.fullname
+      this.newReview.by.imgUrl = this.loginUser.imgUrl
+      console.log(' this.newReview.by.imgUrl:', this.newReview.by.imgUrl)
+      this.newReview.by._id = this.loginUser._id
+      try
+      {
+        await this.$store.dispatch({ type: 'addReview', review: this.newReview, stay: this.stay })
+        // showSuccessMsg('Review added')
+        this.newReview = {
+          at: null,
+          by: {
+            fullname: '',
+            imgUrl: '',
+            _id: '',
+          },
+          txt: ''
+        }
+      } catch (err)
+      {
+        // showErrorMsg('Cannot add review')
+      }
     }
 
   },

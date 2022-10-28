@@ -19,7 +19,7 @@ export const userStore = {
 			return users
 		},
 		loggedinUser({loggedinUser}) {
-			return loggedinUser
+			return userService.getLoggedinUser()
 		},
 		watchedUser({watchedUser}) {
 			return watchedUser

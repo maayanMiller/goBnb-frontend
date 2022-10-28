@@ -1,7 +1,7 @@
 <template>
   <section class="main-reviews-container">
     <h2 class="title">★ {{ stay.reviewScores.rating / 20 }}<span> • </span>{{
-    stay.reviews.length
+        stay.reviews.length
     }} reviews </h2>
     <div class="reviews-bars">
       <div class="left-rev">
@@ -89,7 +89,7 @@
     <div class="reviews">
       <div class="review" v-for="rev in stay.reviews.slice(0, 6)" :key="rev">
         <div class="rev-head">
-          <img :src="reviewerImg()" alt="">
+          <img :src="reviewerImg(rev)" alt="">
           <div class="rev-title">
             <h4 class="name">{{ rev.by.fullname }}</h4>
             <h5 class="date">{{ date(new Date(rev.at)) }}</h5>
@@ -119,7 +119,6 @@ import { utilService } from '../services/util.service.js'
 export default {
   components: {
     addReview,
-
   },
   props: {
     stay: {
@@ -149,7 +148,8 @@ export default {
     updateImgIndex() {
       this.userImageIndex = utilService.getRandomInt(1, 100)
     },
-    reviewerImg() {
+    reviewerImg(rev) {
+      if (rev.by.imgUrl) return rev.by.imgUrl
       const index = utilService.getRandomInt(1, 100)
       const gender = (utilService.getRandomInt(1, 100) % 2 === 0) ? 'men' : 'women'
       return `https://randomuser.me/api/portraits/${gender}/${index}.jpg`
