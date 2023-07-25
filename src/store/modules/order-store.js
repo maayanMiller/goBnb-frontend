@@ -88,7 +88,7 @@ export default {
 				// if (!context.state.orders) await context.dispatch({ type: 'loadorders' })
 				const isEdit = !!order._id
 				const savedOrder = await orderService.saveOrder(order)
-				// context.commit({type: isEdit ? 'updateOrder' : 'addOrder', order: savedOrder})
+				context.commit({type: isEdit ? 'updateOrder' : 'addOrder', order: savedOrder})
 			} catch (err) {
 				console.log(err)
 			}
